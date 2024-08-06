@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Navigation Bar</title>
+  <link rel="stylesheet" href="travel_recommendation.css">
+</head>
+<body>
+    <!-- Logo positioned at the top left corner -->
+  <div class="top-left-logo">
+    <img src="images/logo2.png" alt="Logo">
+  </div>
+  <nav>
+        <div class="empty">
+            <p></p>
+        <!--img src="logo.png" alt="Logo"-->
+        </div>
+        <div class="links">
+            <a href="#home" id="home-link">Home</a>
+            <a href="#about" id="about-link">About Us</a>
+            <a href="#contact" id="contact-link">Contact Us</a>
+        </div> 
+
+        <div class="search" id="search-section">
+            <input type="text" id="searchBox" placeholder="Enter a destination or keyword">
+            <button id="searchBtn">Search</button>
+            <button id="clearBtn">Clear</button>
+          </div>
+       
+  </nav>
+
+  <!-- Floating div for message -->
+  <div id="message-box" class="floating-message">
+    Supply data...
+  </div>
+
+  <!-- Floating divs -->
+  <div class="floating-div" id="home-section">
+    <div class="message">Explore Beyond Boundaries</div>
+    <div class="details">Discover the world's most breathtaking natural wonders with us. From serene forests to majestic mountains, our guided tours immerse you in the beauty of nature. Embark on unforgettable adventures and create lasting memories in the heart of the wild. </div>
+    <button class="book-now">Book Now</button>
+  </div>
+
+  <!-- Social media icons at the lower left -->
+  <div class="social-media-icons">
+    <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+    <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+    <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+    <a href="https://youtube.com" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+  </div>
+
+
+  <!-- ABOUT -->
+  <div class="about" id="about-section">
+    <div class="message">ABOUT US</div>
+    <div class="about-1">
+        <p>Welcome to WanderLust Adventures, where we turn your travel dreams into reality, one hilarious mishap at a time! At WanderLust, our motto is: “Why just see the world when you can trip over it too?”</p>
+        <p>Our journey began when our founder, Bob Smith, decided to mix his love for travel with his even greater love for misadventures. After an unfortunate encounter with a rogue flamingo in Bali and a culinary disaster involving durian fruit in Thailand, Bob realized that travel wasn’t just about seeing new places—it was about embracing every delightful disaster along the way.</p>      
+        <p>At WanderLust, we specialize in turning travel chaos into cherished memories. Our team is a merry band of travel enthusiasts, each with their own unique expertise in navigating airport terminals, deciphering local cuisine, and dodging the occasional stray camel. Our goal is to make sure that your trip is so packed with laughter and wonder that you'll need a vacation from your vacation!</p>
+    </div>
+    <br>
+    <div class="team">
+        <div class="subMessage">OUR TEAM</div>
+        <div class="about-member"> 
+            <img style="width: 100px; height: auto;"  src="images/man.png"/>
+            <p style="font-size: 17px; font-weight: bold;">Chuckles McFumblepants</p>
+            <p style="font-size: 12px; ">Design epic adventures with humor and handle travel mishaps with flair.</p>
+            <button class="book-now">Chief Adventure Architect</button>
+        </div>
+
+        <div class="about-member"> 
+            <img style="width: 100px; height: auto;"  src="images/user.png"/>
+            <p style="font-size: 17px; font-weight: bold;">CSnickers Whimsybottom</p>
+            <p style="font-size: 12px; ">Spread joy, orchestrate laughter, and plan hilariously unforgettable events.</p>
+            <button class="book-now">Chief Fun Officer</button>
+        </div>
+
+        <div class="about-member"> 
+            <img style="width: 100px; height: auto;"  src="images/boy.png"/>
+            <p style="font-size: 17px; font-weight: bold;">Bingo McFrolics</p>
+            <p style="font-size: 12px; ">Create epic pranks, ensure laughter, and master the art of chaos.</p>
+            <button class="book-now">Master of Mischief</button>
+        </div>
+    </div>
+</div>
+
+
+ <!-- CONTACT US -->
+  <div class="contact" id="contact-section">
+    <div style="display: inline;">
+        <div class="subMessage">CONTACT US</div>
+        <br>
+        <p>Get in touch</p>
+    </div>
+    
+    <div class="form-container">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name">      
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email">    
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>    
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+  </div>
+ 
+  <div class="res" id="result-section">
+        <div id="results" >
+        </div>
+  </div>
+
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>
