@@ -174,6 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clearButton.addEventListener('click', function() {
       searchInput.value = ''; // Clear the search input
       hideMessage(); // Hide the message box
+      resultsContainer.innerHTML = '';
     });
 
 
