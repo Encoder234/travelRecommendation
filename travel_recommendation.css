@@ -1,0 +1,356 @@
+/* Reset default margins and paddings */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .empty {
+    width: 100px;
+  } 
+  
+  /* Style for the navigation bar */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: maroon;
+    padding: 10px;
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    height: 39px; /* Adjust size as needed */
+  }
+  
+
+  nav div {
+    display: flex;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+
+  /* Style for the logo section */
+  .logo img {
+    height: 40px; /* Adjust size as needed */
+  }
+
+  .links {
+    display: flex;
+    position: absolute;
+    left: 390px; 
+    /*top: 50%;
+    transform: translateY(-50%); 
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 300px); */
+  }
+
+  
+  /* Style for the links section */
+  .links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 17px;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style for the search section  */
+  .search {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .search input {
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 15px; /* Rounded edges for the search box */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+    width: 300px; 
+  }
+  
+  .search button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    background-color: white;
+    color: maroon;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .search button:hover {
+    background-color: lightgray;
+  }
+  
+
+/* Style for the entire body to include the background image */
+body {
+    background-image: url('images/imageX.jpg');
+    background-size: cover; /* Ensure the background image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure the background image does not repeat */
+    height: 100vh; /* Set the body height to 100% of the viewport height */
+  }
+
+  /* Style for the logo floating on top of the navigation bar */
+.top-left-logo {
+    position: absolute;
+    top: 5px; /* Adjust the top position as needed */
+    left: 5px; /* Adjust the left position as needed */
+    z-index: 20; /* Ensure the logo is on top */
+  }
+
+  .top-left-logo img {
+    height: 110px; /* Set the height of the logo to 100px */
+    width: auto; /* Maintain the aspect ratio */
+  }
+
+
+  /* Style for the social media icons */
+.social-media-icons {
+    position: absolute;
+    bottom: 150px; /* Padding from the bottom */
+    left: 10px; /* Adjust the left position as needed */
+    display: flex;
+    flex-direction: column; /* Display icons in a column (vertically) */
+    gap: 5px; /* Space between icons */
+  }
+  
+  .social-media-icons img {
+    height: 60px; /* Adjust the size of the social media icons as needed */
+    width: auto; /* Maintain the aspect ratio */
+  }
+
+
+  /* Floating div styles */
+.floating-div {
+    display: list-item;
+    position: fixed;
+    top: 120px; /* Adjust as needed */
+    left: 120px; /* Fixed position 300px from the left */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background color */
+    padding: 30px;
+    border: none; /* Remove border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    z-index: 1000; /* Ensure it is above other content */
+    width: 320px; /* Set width to 200px */
+  }
+  
+  /* Style for the big welcome message */
+  .message {
+    font-size: 64px; /* Size of the message */
+    font-weight: bold; /* Make it bold */
+    margin-bottom: 10px; /* Space below the message */
+    word-wrap: break-word; /* Ensure text wraps within the div */
+  }
+  
+  /* Style for the details message */
+  .details {
+    font-family: Verdana, sans-serif; /* Font family */
+    font-size: 16px; /* Smaller font size than the welcome message */
+    margin-bottom: 10px; /* Space below the details */
+  }
+  
+  /* Style for the button */
+  .book-now {
+    background-color: maroon; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .book-now:hover {
+    background-color: darkred; /* Darker background on hover */
+  }
+
+
+  /* Floating message box style */
+.floating-message {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 70px; /* Adjust position as needed */
+    right: 1%;
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgba(255, 0, 0, 0.8); /* Semi-transparent red background */
+    color: white; /* Text color */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    z-index: 1000; /* Ensure it is above other content */
+  }
+
+
+/*---------------------- about -----------------------*/
+.about {
+    display: list-item;
+    position: fixed;
+    top: 80px; /* Adjust as needed */
+    left: 170px; /* Fixed position 300px from the left */
+  }
+
+.about-1 {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background color */
+    padding: 30px;
+    border: none; /* Remove border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    z-index: 1000; /* Ensure it is above other content */
+    width: 1000px; /* Set width to 200px */
+  }
+
+.about-2 {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background color */
+    padding: 30px;
+    border: none; /* Remove border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    z-index: 1000; /* Ensure it is above other content */
+    width: 320px; /* Set width to 200px */
+  }
+
+.subMessage {
+    font-size: 30px; /* Size of the message */
+    font-weight: bold; /* Make it bold */
+    margin-bottom: 10px; /* Space below the message */
+    word-wrap: break-word; /* Ensure text wraps within the div */
+    padding-right: 100px;
+}
+
+.team {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background color */
+    padding: 30px;
+    border: none; /* Remove border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+
+.about-member{
+    width: 200px;
+    word-wrap: break-word;
+    align-items: center;
+    padding-left: 20px;
+    
+}
+
+  /*---------------------- about -----------------------*/
+
+  /* --------------------- CONTACT US -----------------------------*/
+  .contact {
+    display: flex;
+    position: fixed;
+    top: 100px; /* Adjust as needed */
+    right: 100px; /* Fixed position 300px from the left */
+    
+  }
+
+  .form-container {
+    max-width: 550px;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+  }
+
+  .form-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: maroon;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .form-container button:hover {
+    background-color: red;
+  }
+  /* --------------------- CONTACT US -----------------------------*/
+
+  /* --------------------- SEARCH RESULT -----------------------------*/
+
+
+  .res {
+    display: flist-item;
+    position: fixed;
+    top: 100px; /* Adjust as needed */
+    right: 10px; /* Fixed position 300px from the left */
+    max-height: 80vh; /* Set a maximum height to enable vertical scrolling */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  }
+
+
+  /* --------------------- SEARCH RESULT -----------------------------*/
+
+/*
+  #results {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+} */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 600px;
+    margin: 10px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card .name {
+    font-size: 2.5em; /* Larger font size for name */
+    font-weight: bold; /* Bold font for name */
+    /*margin-bottom: 5px;*/
+}
+
+.card .description {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 1.5 em; /* Font size for description */
+}
