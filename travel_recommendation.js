@@ -40,6 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function hideMessage() {
       messageBox.style.display = 'none';
     }
+
+
+    searchInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            searchButton.click();
+        }
+    });
+
+
+    function getRandomElements(arr, count) {
+        const shuffled = arr.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+    }
+
+
   
     // Search button click event
     searchButton.addEventListener('click', function() {
@@ -69,7 +84,92 @@ document.addEventListener('DOMContentLoaded', function() {
         } // if*/
 
 
+        if ((searchQuery.includes('countries'))  || (searchQuery.includes('country'))) { 
 
+            
+            const randomCountries = getRandomElements(data.countries, 1);
+            randomCountries.forEach(country => {
+                const randomCities = getRandomElements(country.cities, 2);
+                randomCities.forEach(city => {
+                    results.push({
+                        name: city.name,
+                        imageUrl: city.imageUrl,
+                        description: city.description
+                    });
+                });
+            });
+
+            console.log("Country check", results);
+            
+        
+        }  else  if ((searchQuery.includes('temples'))  || (searchQuery.includes('temple'))) {  
+            
+            data.temples.forEach(temple => {
+                results.push({
+                    name: temple.name,
+                    imageUrl: temple.imageUrl,
+                    description: temple.description
+                });
+            });
+
+            console.log("Temple check", results);
+            
+
+        } else  if ((searchQuery.includes('beaches'))  || (searchQuery.includes('beach'))) {  
+            
+            data.beaches.forEach(beach => {
+                results.push({
+                    name: beach.name,
+                    imageUrl: beach.imageUrl,
+                    description: beach.description
+                });
+            });
+
+            console.log("Beach check", results);
+
+        } else {
+
+            // Search within all available data if the key does not match
+            for (let key in data) {
+                data[key].forEach(item => {
+                    if (item.cities) { // If the item has a 'cities' key
+                        item.cities.forEach(city => {
+                            const name = city.name ? city.name.toLowerCase() : '';
+                            const description = city.description ? city.description.toLowerCase() : '';
+
+                            if (name.includes(searchQuery) || description.includes(searchQuery)) {
+                                results.push({
+                                    name: city.name,
+                                    description: city.description,
+                                    imageUrl: city.imageUrl
+                                });
+                            }
+                        });
+                    } else { // For 'beaches' and 'temples'
+                        const name = item.name ? item.name.toLowerCase() : '';
+                        const description = item.description ? item.description.toLowerCase() : '';
+
+                        if (name.includes(searchQuery) || description.includes(searchQuery)) {
+                            results.push({
+                                name: item.name,
+                                description: item.description,
+                                imageUrl: item.imageUrl
+                            });
+                        }
+                    }
+                });
+            }
+
+
+        }// if else 
+
+        
+    
+
+
+
+
+    /*
 
     // Search based on the key (e.g., 'countries', 'beaches', 'temples')
     if (data[searchQuery]) {
@@ -77,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log('DIsplaying data again: ' , data);
 
-        if (searchQuery === 'countries') {
+        if (searchQuery === 'countries' || searchQuery.includes(searchQuery)) {
             data.countries.forEach(country => {
                 country.cities.forEach(city => {
                     results.push({
@@ -86,13 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         imageUrl: city.imageUrl
                     });
 
-                    /*if (city.name.toLowerCase().includes(searchQuery) || city.description.toLowerCase().includes(searchQuery)) {
-                        results.push({
-                            name: city.name,
-                            description: city.description,
-                            imageUrl: city.imageUrl
-                        });
-                    }*/
+                    
                 });
             });
         } else { // For 'beaches' and 'temples'
@@ -102,13 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     description: item.description,
                     imageUrl: item.imageUrl
                 });
-                /*if (item.name.toLowerCase().includes(searchQuery) || item.description.toLowerCase().includes(searchQuery)) {
-                    results.push({
-                        name: item.name,
-                        description: item.description,
-                        imageUrl: item.imageUrl
-                    });
-                }*/
+               
             });
         }
     } else {
@@ -143,6 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+    */
    
 
         console.log('Search results:', results); // Log the search results
